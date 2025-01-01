@@ -33,6 +33,8 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+Route::get('/print-invoice/{id}', [PesananController::class, 'print'])->name('print.invoice');
+
 
 // Rute untuk menghapus pesanan
 Route::delete('/delete-pesanan/{id}', [PesananController::class, 'destroy']);

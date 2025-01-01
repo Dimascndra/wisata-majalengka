@@ -25,7 +25,8 @@
                 height: 100%;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
+                justify-content: flex-start;
+                /* Changed from center to flex-start */
                 align-items: center;
             }
 
