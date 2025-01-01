@@ -5,10 +5,10 @@
     <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
         <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Wisata di
-                Banyumas</h2>
+                Majalengka</h2>
         </div>
         <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-3">
-            <!-- Wisata Hutan Pinus Limpakuwus -->
+            <!-- Wisata Hutan Pinus Argalingga -->
             <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">
                     <img class="rounded-t-lg bg-auto" src="img/hutanpinus.jpg" alt="Hutan Pinus" />
@@ -16,11 +16,15 @@
                 <div class="p-5">
                     <a href="#">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Hutan
-                            Pinus Limpakuwus</h5>
+                            Pinus Argalingga</h5>
                     </a>
                     <button type="button" data-modal-target="modal-video-hutan" data-modal-toggle="modal-video-hutan"
                         class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                         Video profil
+                    </button>
+                    <button type="button" data-modal-target="modal-harga-hutan" data-modal-toggle="modal-harga-hutan"
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
+                        Lihat Harga
                     </button>
                     <!-- Modal Video Profil -->
                     <div id="modal-video-hutan" tabindex="-1"
@@ -40,7 +44,7 @@
                                 </button>
                                 <div class="p-6 items-center">
                                     <iframe width="600" height="315"
-                                        src="https://www.youtube.com/embed/zJ04Eel5ggk" title="YouTube video player"
+                                        src="https://www.youtube.com/embed/Kujbmh4dLd0" title="YouTube video player"
                                         frameborder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                         allowfullscreen></iframe>
@@ -55,7 +59,7 @@
                             <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
                                 <button type="button"
                                     class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
-                                    data-modal-hide="modal-video">
+                                    data-modal-hide="modal-harga-hutan">
                                     <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
@@ -74,7 +78,10 @@
                                                         nama Wisata
                                                     </th>
                                                     <th scope="col" class="px-6 py-3">
-                                                        Harga
+                                                        Harga Dewasa
+                                                    </th>
+                                                    <th scope="col" class="px-6 py-3">
+                                                        Harga Anak-anak
                                                     </th>
                                                     <th scope="col" class="px-6 py-3">
                                                         Aksi
@@ -85,13 +92,16 @@
                                                 <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
                                                     <th scope="row"
                                                         class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                        Hutan Pinus Limpakuwus
+                                                        Hutan Pinus Argalingga
                                                     </th>
                                                     <td class="px-6 py-4">
                                                         Rp. 15000
                                                     </td>
                                                     <td class="px-6 py-4">
-                                                        <a href="#"
+                                                        Rp. 7500
+                                                    </td>
+                                                    <td class="px-6 py-4">
+                                                        <a href="{{ route('pesanan.create', ['tempat_wisata' => 'Hutan Pinus Argalingga']) }}"
                                                             class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Pesan
                                                             Tiket</a>
                                                     </td>
@@ -105,19 +115,23 @@
                     </div>
                 </div>
             </div>
-            <!-- Wisata Curug Bayan -->
+            <!-- Wisata Curug Cipeteuy -->
             <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">
-                    <img class="rounded-t-lg bg-auto" src="img/curugbayan.jpg" alt="Curug bayan" />
+                    <img class="rounded-t-lg bg-auto" src="img/curugbayan.jpg" alt="Curug Cipeteuy" />
                 </a>
                 <div class="p-5">
                     <a href="#">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Curug
-                            Bayan</h5>
+                            Cipeteuy</h5>
                     </a>
                     <button type="button" data-modal-target="modal-video-bayan" data-modal-toggle="modal-video-bayan"
                         class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                         Video profil
+                    </button>
+                    <button type="button" data-modal-target="modal-harga-bayan" data-modal-toggle="modal-harga-bayan"
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
+                        Lihat Harga
                     </button>
                     <!-- Modal Video Profil -->
                     <div id="modal-video-bayan" tabindex="-1"
@@ -137,7 +151,7 @@
                                 </button>
                                 <div class="p-6 items-center">
                                     <iframe width="600" height="315"
-                                        src="https://www.youtube.com/embed/qOLKrzaqci8" title="YouTube video player"
+                                        src="https://www.youtube.com/embed/T-JFr0L6j1c" title="YouTube video player"
                                         frameborder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                         allowfullscreen></iframe>
@@ -152,7 +166,7 @@
                             <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
                                 <button type="button"
                                     class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
-                                    data-modal-hide="modal-video">
+                                    data-modal-hide="modal-harga-bayan">
                                     <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
@@ -171,7 +185,10 @@
                                                         nama Wisata
                                                     </th>
                                                     <th scope="col" class="px-6 py-3">
-                                                        Harga
+                                                        Harga Dewasa
+                                                    </th>
+                                                    <th scope="col" class="px-6 py-3">
+                                                        Harga Anak-anak
                                                     </th>
                                                     <th scope="col" class="px-6 py-3">
                                                         Aksi
@@ -182,13 +199,16 @@
                                                 <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
                                                     <th scope="row"
                                                         class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                        Curug Bayan
+                                                        Curug Cipeteuy
                                                     </th>
                                                     <td class="px-6 py-4">
                                                         Rp. 10000
                                                     </td>
                                                     <td class="px-6 py-4">
-                                                        <a href="#"
+                                                        Rp. 5000
+                                                    </td>
+                                                    <td class="px-6 py-4">
+                                                        <a href="{{ route('pesanan.create', ['tempat_wisata' => 'Curug Cipeteuy']) }}"
                                                             class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Pesan
                                                             Tiket</a>
                                                     </td>
@@ -202,23 +222,26 @@
                     </div>
                 </div>
             </div>
-            <!-- Wisata Telaga Kumpe -->
+            <!-- Wisata Telaga Nila -->
             <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">
-                    <img class="rounded-t-lg bg-auto" src="img/telagakumpe.jpg" alt="Telaga Kumpe" />
+                    <img class="rounded-t-lg bg-auto" src="img/telagakumpe.jpg" alt="Telaga Nila" />
                 </a>
                 <div class="p-5">
                     <a href="#">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Telaga
-                            Kumpe</h5>
+                            Nila</h5>
                     </a>
-                    <button type="button" data-modal-target="modal-video-kumpe"
-                        data-modal-toggle="modal-video-kumpe"
+                    <button type="button" data-modal-target="modal-video-nila" data-modal-toggle="modal-video-nila"
                         class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                         Video profil
                     </button>
+                    <button type="button" data-modal-target="modal-harga-nila" data-modal-toggle="modal-harga-nila"
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
+                        Lihat Harga
+                    </button>
                     <!-- Modal Video Profil -->
-                    <div id="modal-video-kumpe" tabindex="-1"
+                    <div id="modal-video-nila" tabindex="-1"
                         class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
                         <div class="relative w-full h-full max-w-2xl md:h-auto">
                             <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
@@ -234,9 +257,8 @@
                                     <span class="sr-only">Close modal</span>
                                 </button>
                                 <div class="p-6 items-center">
-                                    <iframe width="600" height="315"
-                                        src="https://www.youtube.com/embed/IflCr42HRHI" title="YouTube video player"
-                                        frameborder="0"
+                                    <iframe width="600" height="315" src=""
+                                        title="YouTube video player" frameborder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                         allowfullscreen></iframe>
                                 </div>
@@ -244,13 +266,13 @@
                         </div>
                     </div>
                     <!-- Modal harga -->
-                    <div id="modal-harga-kumpe" tabindex="-1"
+                    <div id="modal-harga-nila" tabindex="-1"
                         class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
                         <div class="relative w-full h-full max-w-2xl md:h-auto">
                             <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
                                 <button type="button"
                                     class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
-                                    data-modal-hide="modal-video">
+                                    data-modal-hide="modal-harga-nila">
                                     <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
@@ -269,7 +291,10 @@
                                                         nama Wisata
                                                     </th>
                                                     <th scope="col" class="px-6 py-3">
-                                                        Harga
+                                                        Harga Dewasa
+                                                    </th>
+                                                    <th scope="col" class="px-6 py-3">
+                                                        Harga Anak-anak
                                                     </th>
                                                     <th scope="col" class="px-6 py-3">
                                                         Aksi
@@ -280,13 +305,16 @@
                                                 <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
                                                     <th scope="row"
                                                         class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                        Telaga Kumpe
+                                                        Telaga Nila
                                                     </th>
                                                     <td class="px-6 py-4">
                                                         Rp. 5000
                                                     </td>
                                                     <td class="px-6 py-4">
-                                                        <a href="#"
+                                                        Rp. 2500
+                                                    </td>
+                                                    <td class="px-6 py-4">
+                                                        <a href="{{ route('pesanan.create', ['tempat_wisata' => 'Telaga Nila']) }}"
                                                             class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Pesan
                                                             Tiket</a>
                                                     </td>
@@ -300,23 +328,28 @@
                     </div>
                 </div>
             </div>
-            <!-- Curug Jenggala -->
+            <!-- Curug Muara jaya -->
             <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">
-                    <img class="rounded-t-lg bg-auto" src="img/curugjenggala.jpg" alt="Curug Jenggala" />
+                    <img class="rounded-t-lg bg-auto" src="img/curugjenggala.jpg" alt="Curug Muara jaya" />
                 </a>
                 <div class="p-5">
                     <a href="#">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Curug
-                            Jenggala</h5>
+                            Muara jaya</h5>
                     </a>
-                    <button type="button" data-modal-target="modal-video-jenggala"
-                        data-modal-toggle="modal-video-jenggala"
+                    <button type="button" data-modal-target="modal-video-muara-jaya"
+                        data-modal-toggle="modal-video-muara jaya"
                         class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                         Video profil
                     </button>
+                    <button type="button" data-modal-target="modal-harga-muara jaya"
+                        data-modal-toggle="modal-harga-muara jaya"
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
+                        Lihat Harga
+                    </button>
                     <!-- Modal Video Profil -->
-                    <div id="modal-video-jenggala" tabindex="-1"
+                    <div id="modal-video-muara jaya" tabindex="-1"
                         class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
                         <div class="relative w-full h-full max-w-2xl md:h-auto">
                             <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
@@ -332,9 +365,8 @@
                                     <span class="sr-only">Close modal</span>
                                 </button>
                                 <div class="p-6 items-center">
-                                    <iframe width="600" height="315"
-                                        src="https://www.youtube.com/embed/MNWpkvgcRbk" title="YouTube video player"
-                                        frameborder="0"
+                                    <iframe width="600" height="315" src=""
+                                        title="YouTube video player" frameborder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                         allowfullscreen></iframe>
                                 </div>
@@ -342,13 +374,13 @@
                         </div>
                     </div>
                     <!-- Modal harga -->
-                    <div id="modal-harga-jenggala" tabindex="-1"
+                    <div id="modal-harga-muara jaya" tabindex="-1"
                         class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
                         <div class="relative w-full h-full max-w-2xl md:h-auto">
                             <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
                                 <button type="button"
                                     class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
-                                    data-modal-hide="modal-video">
+                                    data-modal-hide="modal-harga-muara jaya">
                                     <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
@@ -367,7 +399,10 @@
                                                         nama Wisata
                                                     </th>
                                                     <th scope="col" class="px-6 py-3">
-                                                        Harga
+                                                        Harga Dewasa
+                                                    </th>
+                                                    <th scope="col" class="px-6 py-3">
+                                                        Harga Anak-anak
                                                     </th>
                                                     <th scope="col" class="px-6 py-3">
                                                         Aksi
@@ -378,13 +413,16 @@
                                                 <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
                                                     <th scope="row"
                                                         class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                        Curug Jenggala
+                                                        Curug Muara jaya
                                                     </th>
                                                     <td class="px-6 py-4">
                                                         Rp. 10000
                                                     </td>
                                                     <td class="px-6 py-4">
-                                                        <a href="#"
+                                                        Rp. 5000
+                                                    </td>
+                                                    <td class="px-6 py-4">
+                                                        <a href="{{ route('pesanan.create', ['tempat_wisata' => 'Curug Muara jaya']) }}"
                                                             class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Pesan
                                                             Tiket</a>
                                                     </td>
@@ -398,23 +436,28 @@
                     </div>
                 </div>
             </div>
-            <!-- Bukit Agaran -->
+            <!-- Bukit Kanaga Hill -->
             <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">
-                    <img class="rounded-t-lg bg-auto" src="img/bukitagaran.jpg" alt="Bukit Agaran" />
+                    <img class="rounded-t-lg bg-auto" src="img/bukitagaran.jpg" alt="Bukit Kanaga Hill" />
                 </a>
                 <div class="p-5">
                     <a href="#">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Bukit
-                            Agaran</h5>
+                            Kanaga Hill</h5>
                     </a>
-                    <button type="button" data-modal-target="modal-video-agaran"
-                        data-modal-toggle="modal-video-agaran"
+                    <button type="button" data-modal-target="modal-video-kanaga Hill"
+                        data-modal-toggle="modal-video-kanaga Hill"
                         class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                         Video profil
                     </button>
+                    <button type="button" data-modal-target="modal-harga-kanaga Hill"
+                        data-modal-toggle="modal-harga-kanaga Hill"
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
+                        Lihat Harga
+                    </button>
                     <!-- Modal Video Profil -->
-                    <div id="modal-video-agaran" tabindex="-1"
+                    <div id="modal-video-kanaga Hill" tabindex="-1"
                         class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
                         <div class="relative w-full h-full max-w-2xl md:h-auto">
                             <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
@@ -430,9 +473,8 @@
                                     <span class="sr-only">Close modal</span>
                                 </button>
                                 <div class="p-6 items-center">
-                                    <iframe width="600" height="315"
-                                        src="https://www.youtube.com/embed/wNHMlJs-UrA" title="YouTube video player"
-                                        frameborder="0"
+                                    <iframe width="600" height="315" src="UrA"
+                                        title="YouTube video player" frameborder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                         allowfullscreen></iframe>
                                 </div>
@@ -440,13 +482,13 @@
                         </div>
                     </div>
                     <!-- Modal harga -->
-                    <div id="modal-harga-agaran" tabindex="-1"
+                    <div id="modal-harga-kanaga Hill" tabindex="-1"
                         class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
                         <div class="relative w-full h-full max-w-2xl md:h-auto">
                             <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
                                 <button type="button"
                                     class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
-                                    data-modal-hide="modal-video">
+                                    data-modal-hide="modal-harga-kanaga Hill">
                                     <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
@@ -465,7 +507,10 @@
                                                         nama Wisata
                                                     </th>
                                                     <th scope="col" class="px-6 py-3">
-                                                        Harga
+                                                        Harga Dewasa
+                                                    </th>
+                                                    <th scope="col" class="px-6 py-3">
+                                                        Harga Anak-anak
                                                     </th>
                                                     <th scope="col" class="px-6 py-3">
                                                         Aksi
@@ -476,13 +521,16 @@
                                                 <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
                                                     <th scope="row"
                                                         class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                        Bukit Agaran
+                                                        Bukit Kanaga Hill
                                                     </th>
                                                     <td class="px-6 py-4">
                                                         Rp. 5000
                                                     </td>
                                                     <td class="px-6 py-4">
-                                                        <a href="#"
+                                                        Rp. 2500
+                                                    </td>
+                                                    <td class="px-6 py-4">
+                                                        <a href="{{ route('pesanan.create', ['tempat_wisata' => 'Bukit Kanaga Hill']) }}"
                                                             class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Pesan
                                                             Tiket</a>
                                                     </td>
@@ -496,20 +544,25 @@
                     </div>
                 </div>
             </div>
-            <!-- Pagubugan Melung -->
+            <!-- Lembah Panyaweuyan -->
             <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">
-                    <img class="rounded-t-lg bg-auto" src="img/melung.jpg" alt="Pagubugan Melung" />
+                    <img class="rounded-t-lg bg-auto" src="img/melung.jpg" alt="Lembah Panyaweuyan" />
                 </a>
                 <div class="p-5">
                     <a href="#">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                            Pagubugan Melung</h5>
+                            Lembah Panyaweuyan</h5>
                     </a>
                     <button type="button" data-modal-target="modal-video-melung"
                         data-modal-toggle="modal-video-melung"
                         class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                         Video profil
+                    </button>
+                    <button type="button" data-modal-target="modal-harga-melung"
+                        data-modal-toggle="modal-harga-melung"
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
+                        Lihat Harga
                     </button>
                     <!-- Modal Video Profil -->
                     <div id="modal-video-melung" tabindex="-1"
@@ -528,9 +581,8 @@
                                     <span class="sr-only">Close modal</span>
                                 </button>
                                 <div class="p-6 items-center">
-                                    <iframe width="600" height="315"
-                                        src="https://www.youtube.com/embed/Lqd8YDk8Zs4" title="YouTube video player"
-                                        frameborder="0"
+                                    <iframe width="600" height="315" src=""
+                                        title="YouTube video player" frameborder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                         allowfullscreen></iframe>
                                 </div>
@@ -544,7 +596,7 @@
                             <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
                                 <button type="button"
                                     class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
-                                    data-modal-hide="modal-video">
+                                    data-modal-hide="modal-harga-melung">
                                     <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
@@ -563,7 +615,10 @@
                                                         nama Wisata
                                                     </th>
                                                     <th scope="col" class="px-6 py-3">
-                                                        Harga
+                                                        Harga Dewasa
+                                                    </th>
+                                                    <th scope="col" class="px-6 py-3">
+                                                        Harga Anak-anak
                                                     </th>
                                                     <th scope="col" class="px-6 py-3">
                                                         Aksi
@@ -574,13 +629,16 @@
                                                 <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
                                                     <th scope="row"
                                                         class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                        Pagubugan Melung
+                                                        Lembah Panyaweuyan
                                                     </th>
                                                     <td class="px-6 py-4">
                                                         Rp. 10000
                                                     </td>
                                                     <td class="px-6 py-4">
-                                                        <a href="#"
+                                                        Rp. 5000
+                                                    </td>
+                                                    <td class="px-6 py-4">
+                                                        <a href="{{ route('pesanan.create', ['tempat_wisata' => 'Lembah Panyaweuyan']) }}"
                                                             class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Pesan
                                                             Tiket</a>
                                                     </td>
@@ -612,39 +670,46 @@
                         <tr>
                             <th scope="col" class="px-4 py-3">No.</th>
                             <th scope="col" class="px-4 py-3">Nama Wisata</th>
-                            <th scope="col" class="px-4 py-3">Harga</th>
+                            <th scope="col" class="px-4 py-3">Harga Dewasa</th>
+                            <th scope="col" class="px-4 py-3">Harga Anak-anak</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr class="border-b dark:border-gray-700">
                             <td class="px-4 py-3">1.</td>
-                            <td class="px-4 py-3">Hutan Pinus Limpakuwus</td>
+                            <td class="px-4 py-3">Hutan Pinus Argalingga</td>
                             <td class="px-4 py-3">Rp 15.000</td>
+                            <td class="px-4 py-3">Rp 7.500</td>
                         </tr>
                         <tr class="border-b dark:border-gray-700">
                             <td class="px-4 py-3">2.</td>
-                            <td class="px-4 py-3">Curug Bayan</td>
+                            <td class="px-4 py-3">Curug Cipeteuy</td>
                             <td class="px-4 py-3">Rp 10.000 </td>
+                            <td class="px-4 py-3">Rp 5.000</td>
                         </tr>
                         <tr class="border-b dark:border-gray-700">
                             <td class="px-4 py-3">3.</td>
-                            <td class="px-4 py-3">Telaga Kumpe</td>
+                            <td class="px-4 py-3">Telaga Nila</td>
                             <td class="px-4 py-3">Rp 5.000</td>
+                            <td class="px-4 py-3">Rp 2.500</td>
                         </tr>
                         <tr class="border-b dark:border-gray-700">
                             <td class="px-4 py-3">4.</td>
-                            <td class="px-4 py-3">Curug Jenggala</td>
+                            <td class="px-4 py-3">Curug Muara jaya</td>
                             <td class="px-4 py-3">Rp 10.000</td>
-                        </tr>
-                        <tr class="border-b dark:border-gray-700">
-                            <td class="px-4 py-3">5.</td>
-                            <td class="px-4 py-3">Bukit Agaran</td>
                             <td class="px-4 py-3">Rp 5.000</td>
                         </tr>
                         <tr class="border-b dark:border-gray-700">
+                            <td class="px-4 py-3">5.</td>
+                            <td class="px-4 py-3">Bukit Kanaga Hill</td>
+                            <td class="px-4 py-3">Rp 5.000</td>
+                            <td class="px-4 py-3">Rp 2.500</td>
+                        </tr>
+                        <tr class="border-b dark:border-gray-700">
                             <td class="px-4 py-3">6.</td>
-                            <td class="px-4 py-3">Pagubugan Melung</td>
+                            <td class="px-4 py-3">Lembah Panyaweuyan</td>
                             <td class="px-4 py-3">Rp 10.000</td>
+                            <td class="px-4 py-3">Rp 5.000</td>
                         </tr>
                     </tbody>
                 </table>

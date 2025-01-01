@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Tiket;
+use App\Models\Pesanan;
 use Illuminate\Http\Request;
 
 class PesananController extends Controller
@@ -25,8 +26,9 @@ class PesananController extends Controller
     {
         //validasi form
         $this->validate($request, [
+            'user_id' => 'required',
             'nama' => 'required',
-            'nomer_identitas' => 'required|min:16|max:16',
+            'nomor_identitas' => 'required|min:16|max:16',
             'no_hp' => 'required|min:11|max:13',
             'tempat_wisata' => 'required',
             'tanggal_kunjungan' => 'required',
@@ -38,8 +40,9 @@ class PesananController extends Controller
 
         //membuat form pemesanan
         Tiket::create([
+            'user_id'                  => $request->user_id,
             'nama'                  => $request->nama,
-            'nomer_identitas'       => $request->nomer_identitas,
+            'nomor_identitas'       => $request->nomor_identitas,
             'no_hp'                 => $request->no_hp,
             'tempat_wisata'         => $request->tempat_wisata,
             'tanggal_kunjungan'     => $request->tanggal_kunjungan,
@@ -51,5 +54,24 @@ class PesananController extends Controller
 
         //menampilkan halaman daftar pesanan setelah mengisi form pesanan
         return redirect()->route('pesanan.index');
+    }
+
+    // fungsi untuk mencetak invoice berdasarkan ID
+    public function print($id)
+    {
+        $pesanan = Tiket::findOrFail($id);
+        return view('pesan.print', compact('pesanan'));
+    }
+
+    public function destroy($id)
+    {
+        $pesanan = Tiket::find($id);
+
+        if ($pesanan) {
+            $pesanan->delete();
+            return response()->json(['message' => 'Pesanan berhasil dihapus.'], 200);
+        }
+
+        return response()->json(['message' => 'Pesanan tidak ditemukan.'], 404);
     }
 }

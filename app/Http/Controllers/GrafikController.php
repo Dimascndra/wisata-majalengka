@@ -30,7 +30,7 @@ class GrafikController extends Controller
         $jmlDewasaPM = new Grafik();
 
         // data daftar wisata
-        $categories = ['Hutan Pinus Limpakuwus', 'Curug Bayan', 'Telaga Kumpe', 'Curug Jenggala', 'Bukit Agaran', 'Pagubugan Melung'];
+        $categories = ['Hutan Argalingga', 'Curug Cipeteuy', 'Telaga Nila', 'Curug Muara Jaya', 'Bukit Kanaga Hill', 'Lembah Panyaweuyan'];
 
         // data grafik
         $chart = [
@@ -40,11 +40,11 @@ class GrafikController extends Controller
                     'name' => 'jumlah',
                     'data' => [
                         ($jmlAnakHPL->jumlahAnakHutanPinus() + $jmlDewasaHPL->jumlahDewasaHutanPinus()),
-                        ($jmlAnakCB->jumlahAnakCurugBayan() + $jmlDewasaCB->jumlahDewasaCurugBayan()),
-                        ($jmlAnakTK->jumlahAnakTelagaKumpe() + $jmlDewasaTK->jumlahDewasaTelagaKumpe()),
-                        ($jmlAnakCJ->jumlahAnakCurugJenggala() + $jmlDewasaCJ->jumlahDewasaCurugJenggala()),
-                        ($jmlAnakBA->jumlahAnakBukitAgaran() + $jmlDewasaBA->jumlahDewasaBukitAgaran()),
-                        ($jmlAnakPM->jumlahAnakPagubuganMelung() + $jmlDewasaPM->jumlahDewasaPagubuganMelung())
+                        ($jmlAnakCB->jumlahAnakCurugCipeteuy() + $jmlDewasaCB->jumlahDewasaCurugCipeteuy()),
+                        ($jmlAnakTK->jumlahAnakTelagaNila() + $jmlDewasaTK->jumlahDewasaTelagaNila()),
+                        ($jmlAnakCJ->jumlahAnakCurugMuaraJaya() + $jmlDewasaCJ->jumlahDewasaCurugMuaraJaya()),
+                        ($jmlAnakBA->jumlahAnakBukitKanagaHill() + $jmlDewasaBA->jumlahDewasaBukitKanagaHill()),
+                        ($jmlAnakPM->jumlahAnakLembahPanyaweuyan() + $jmlDewasaPM->jumlahDewasaLembahPanyaweuyan())
                     ]
                 ]
             ]

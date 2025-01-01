@@ -1,7 +1,8 @@
 <?php
 
 use App\Http\Controllers\GrafikController;
-use App\Http\Controllers\pesanTiketController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PesananController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -10,11 +11,11 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "web" middleware group. Make something great!
 |
 */
-// set route untuk halaman utama
+
 Route::get('/', function () {
     return view('home');
 });
@@ -23,3 +24,17 @@ Route::resource('/pesanan', \App\Http\Controllers\PesananController::class);
 
 // set route untuk halaman grafik
 Route::get('/grafik', [GrafikController::class, 'index'])->name('view.grafik');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+// Rute untuk menghapus pesanan
+Route::delete('/delete-pesanan/{id}', [PesananController::class, 'destroy']);
+
+require __DIR__ . '/auth.php';

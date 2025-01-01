@@ -4,14 +4,17 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Tiket extends Model
 {
     use HasFactory;
+
     // menambahkan variabel untuk manipulasi data
     protected $fillable = [
+        'user_id',
         'nama',
-        'nomer_identitas',
+        'nomor_identitas',
         'no_hp',
         'tempat_wisata',
         'tanggal_kunjungan',
@@ -20,4 +23,10 @@ class Tiket extends Model
         'harga_tiket',
         'total_bayar'
     ];
+
+    // relasi dengan model User
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
 }

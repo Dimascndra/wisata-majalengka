@@ -14,9 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('tikets', function (Blueprint $table) {
-            $table->id('id_pemesan');
+            $table->id();
+            $table->foreignId('user_id');
             $table->string('nama');
-            $table->bigInteger('nomer_identitas');
+            $table->bigInteger('nomor_identitas');
             $table->char('no_hp');
             $table->string('tempat_wisata');
             $table->date('tanggal_kunjungan');
@@ -24,6 +25,7 @@ return new class extends Migration
             $table->integer('pengunjung_anakanak');
             $table->integer('harga_tiket');
             $table->integer('total_bayar');
+            $table->timestamps();
         });
     }
 
