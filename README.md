@@ -58,10 +58,10 @@ Untuk memasang project ini, ikuti langkah-langkah berikut:
 Website ini dibangun menggunakan teknologi Laravel dan Breeze, serta memanfaatkan MySQL untuk manajemen database. Desain antarmuka menggunakan HTML, CSS, dan Tailwind CSS untuk memberikan pengalaman pengguna yang responsif dan menarik. Berikut merupakan beberapa screenshoot website :
 
 Beranda
-![alt text](https://github.com/dimascndra/wisata_majalengka/blob/main/public/img/beranda.png?raw=true)
+![alt text](public/img/beranda.png)
 
 Login
-![alt text](https://github.com/dimascndra/wisata_majalengka/blob/main/public/img/login.png?raw=true)
+![alt text](https://github.com/Dimascndra/wisata-majalengka/blob/main/public/img/beranda.png)
 
 Register
 ![alt text](https://github.com/dimascndra/wisata_majalengka/blob/main/public/img/register.png?raw=true)
