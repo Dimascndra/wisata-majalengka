@@ -61,25 +61,25 @@ Beranda
 ![alt text](public/img/beranda.png)
 
 Login
-![alt text](https://github.com/Dimascndra/wisata-majalengka/blob/main/public/img/beranda.png)
+![alt text](public/img/login.png)
 
 Register
-![alt text](https://github.com/dimascndra/wisata_majalengka/blob/main/public/img/register.png?raw=true)
+![alt text](public/img/register.png)
 
 Grafik
-![alt text](https://github.com/dimascndra/wisata_majalengka/blob/main/public/img/grafik.png?raw=true)
+![alt text](public/img/grafik.png)
 
 Form Pemesanan
-![alt text](https://github.com/dimascndra/wisata_majalengka/blob/main/public/img/pesan.png?raw=true)
+![alt text](public/img/pesan.png)
 
 Form Validasi Pemesanan
-![alt text](https://github.com/dimascndra/wisata_majalengka/blob/main/public/img/validasi-pemesanan.png?raw=true)
+![alt text](public/img/validasi-pemesanan.png)
 
 Daftar Pemesanan
-![alt text](https://github.com/dimascndra/wisata_majalengka/blob/main/public/img/daftar.png?raw=true)
+![alt text](public/img/daftar.png)
 
 Print Invoice
-![alt text](https://github.com/dimascndra/wisata_majalengka/blob/main/public/img/print-invoice.png?raw=true)
+![alt text](public/img/print-invoice.png)
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
